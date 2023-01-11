@@ -22,33 +22,33 @@ import {
   
     return (
       <SafeAreaView className="flex-1 bg-white relative">
-        <ScrollView className="flex-1 px-4 py-6">
-          <View className="relative bg-white shadow-lg">
+        <ScrollView className="flex-1 px-4 pt-3 mt-5">
+          <View className="relative bg-white">
             <Image
               source={{
                 uri: data?.photo?.images?.large?.url
                   ? data?.photo?.images?.large?.url
                   : "https://cdn.pixabay.com/photo/2015/10/30/12/22/eat-1014025_1280.jpg",
               }}
-              className="w-full h-72 object-cover rounded-2xl"
+              className="w-full h-72 object-cover rounded-md"
             />
   
-            <View className="absolute flex-row inset-x-0 top-5 justify-between px-6">
+            <View className="absolute flex-row inset-x-0 top-3 justify-between px-3">
               <TouchableOpacity
                 onPress={() => navigation.navigate("Discover")}
-                className="w-10 h-10 rounded-md items-center justify-center bg-white"
+                className="w-8 h-8 rounded-md items-center justify-center bg-white"
               >
-                <FontAwesome5 name="chevron-left" size={24} color="#06B2BE" />
+                <FontAwesome5 name="chevron-left" size={15} color="#000" />
               </TouchableOpacity>
   
-              <TouchableOpacity className="w-10 h-10 rounded-md items-center justify-center bg-[#06B2BE]">
-                <FontAwesome5 name="heartbeat" size={24} color="#fff" />
+              <TouchableOpacity className="w-8 h-8 rounded-md items-center justify-center bg-white">
+                <FontAwesome5 name="heartbeat" size={15} color="#000" />
               </TouchableOpacity>
             </View>
   
-            <View className="absolute flex-row inset-x-0 bottom-5 justify-between px-6">
+            <View className="absolute flex-row inset-x-0 bottom-3 justify-between px-3">
               <View className="flex-row space-x-2 items-center">
-                <Text className="text-[12px] font-bold text-gray-100">
+                <Text className="text-[30px] font-bold text-gray-100">
                   {data?.price_level}
                 </Text>
                 <Text className="text-[32px] font-bold text-gray-100">
@@ -56,19 +56,19 @@ import {
                 </Text>
               </View>
   
-              <View className="px-2 py-1 rounded-md bg-teal-100">
+              <View className="px-2 items-center justify-center rounded-md bg-white">
                 <Text>{data?.open_now_text}</Text>
               </View>
             </View>
           </View>
   
           <View className="mt-6">
-            <Text className="text-[#428288] text-[24px] font-bold">
+            <Text className="text-black text-[24px] font-bold">
               {data?.name}
             </Text>
             <View className="flex-row items-center space-x-2 mt-2">
-              <FontAwesome name="map-marker" size={25} color="#8C9EA6" />
-              <Text className="text-[#8C9EA6] text-[20px] font-bold">
+              <FontAwesome name="map-marker" size={25} color="#8CC9FF" />
+              <Text className="text-blue-300 text-[20px] font-bold">
                 {data?.location_string}
               </Text>
             </View>
